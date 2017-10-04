@@ -1,0 +1,10 @@
+tasks:
+  lint:
+    usage: Lint Python code
+    description: |
+      This command will lint all .py files by default. Use --file to lint a
+      specific file.
+    options:
+      file:
+        usage: file to lint
+    run: "pylint ${file}"
