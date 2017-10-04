@@ -1,5 +1,3 @@
-FILES=`find . -name "*.py"`
-
-for file in $FILES; do
+for file in `find . -name "*.py"`; do
   pylint $file
 done
