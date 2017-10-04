@@ -4,7 +4,4 @@ tasks:
     description: |
       This command will lint all .py files by default. Use --file to lint a
       specific file.
-    options:
-      file:
-        usage: file to lint
-    run: "pylint ${file}"
+    run: for file in `find . -name "*.py"`; do pylint $file; done
