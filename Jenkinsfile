@@ -28,6 +28,14 @@ pipeline {
         fi
       done
       '''
+      stash 'sources'
+    }
+
+    stage ('Test'){
+      unstash 'sources'
+      sh'''
+      pytest command
+      '''
     }
   }
 }
